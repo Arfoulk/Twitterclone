@@ -1,0 +1,8 @@
+<h1><%= @tag.phrase %></h1>
+
+<% @tag.tweets.each do |tweet| %>
+	<div class="well">
+		<P><%= tweet.user.username %></P>
+		<p><%= tweet.message.html_safe %></p>
+	</div>
+	<% end %>
